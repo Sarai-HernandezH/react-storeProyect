@@ -15,6 +15,10 @@ const Header = ({ logo, menuItem }) => {
         <header className="header">
             <Navbar bg="red" expand="lg" className="nav">
                 <Container className="menu">
+                    <input type="checkbox" className="side-menu" id="side-menu" />
+                    <label className="hamb" htmlFor ="side-menu">
+                        <span className="hamb-line"></span>
+                    </label>
                     <Navbar.Brand href="/" className="logo"> <img src={siteLogo}{...logo} alt="Site Logo"></img>Front Stage Music Store</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
