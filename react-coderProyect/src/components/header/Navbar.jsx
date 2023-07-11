@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import CartWidget from './CartWidget';
-import './style.css';
+import '../header/Navbar.css';
 import siteLogo from '/logo.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,7 +10,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 
 
-const Header = ({ logo, menuItem }) => {
+
+const Header = ({ logo }) => {
     return (
         <header className="header">
             <Navbar bg="red" expand="lg" className="nav">
@@ -23,17 +24,24 @@ const Header = ({ logo, menuItem }) => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav>
-                        <Nav.Link className="navLinks" href="#link">Home</Nav.Link>
-                            <Nav.Link className="navLinks" href="#link">Contact</Nav.Link>
+                            <Nav.Item>
+                                <Nav.Link className="navLinks" href="/">Home</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link className="navLinks"  href="#">Contact</Nav.Link> 
+                            </Nav.Item>
                             <NavDropdown className="navLinks" title="Products" id="basic-nav-dropdown">
-                                <NavDropdown.Item id="dropdown-items" href="#action/3.1">Vynils</NavDropdown.Item>
-                                <NavDropdown.Item id="dropdown-items" href="#action/3.2">Instruments</NavDropdown.Item>
-                                <NavDropdown.Item id="dropdown-items" href="#action/3.3">CD's</NavDropdown.Item>
+                                <NavDropdown.Item id="dropdown-items" href="/vinyls">Vinyls</NavDropdown.Item>
+                                <NavDropdown.Item id="dropdown-items" href="/instrumentCards">Instruments</NavDropdown.Item>
+                                <NavDropdown.Item id="dropdown-items" href="/cds">CD's</NavDropdown.Item>
                             </NavDropdown>
-                            <CartWidget />
+                            <Nav.Item>
+                                <Nav.Link className="navLinks" href="/about">About</Nav.Link>
+                            </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
+                <CartWidget />
             </Navbar>
         </header>
     )

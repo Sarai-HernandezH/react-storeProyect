@@ -1,0 +1,32 @@
+.contentContainer {
+    margin: 1rem 1.6rem;
+}
+.headerTitleCard {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.inputContainer {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+.InstrumentContainer {
+    display: flex !important;
+    flex-wrap: wrap;
+    flex: 1 !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    z-index: 0 !important;
+}
+.instrumentCardContainer{
+    display: flex !important;
+    flex-wrap: wrap;
+    flex: 1 !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    z-index: 0 !important;
+}

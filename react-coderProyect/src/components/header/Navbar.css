@@ -8,6 +8,7 @@
     top: 0;
     width: 100%;
     height: 100px;
+    z-index: 2;
 }
 .logo {
     font-family: 'Passion One', cursive;
@@ -22,7 +23,7 @@
     padding: 20px 20px;
 }
 .hamb-line {
-    background: #fff;
+    background: black;
     display: block;
     height: 2px;
     position: relative;
@@ -31,7 +32,7 @@
 
 .hamb-line::before,
 .hamb-line::after {
-    background: #fff;
+    background: black;
     content: '';
     display: block;
     height: 100%;
@@ -60,17 +61,22 @@
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     background-color: #ce1313;
+    display: flex;
 }
-.navbar-expand-lg .navbar-nav .nav-link, #basic-nav-dropdown{
+.navbar-expand-lg .navbar-nav .nav-link, #basic-nav-dropdown, .dropdown-menu.show{
     font-family: 'Roboto Slab', serif;
     font-weight: bold;
     font-size: 1.2rem;
-    display: flex;
     color: #fff;
+    
+}
+.dropdown-menu.show{
+    z-index: 3;
 }
 
 .side-menu {
     display: none;
+    z-index: 3;
 }
 
 .side-menu:checked ~ nav {
@@ -116,57 +122,4 @@
     .hamb {
         display: none;
     }
-}
-.carrito{
-    width: 50px;
-    height: 50px;
-    margin-left: 12px;
-    cursor: pointer;
-}
-.cantidad{
-    position: absolute;
-    width: 15px;
-    height: 20px;
-    border-radius: 5px;
-    color: #fff;
-}
-.shoppingCart{
-    position: relative;
-    padding: 2px
-}
-.introParagraph{
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    color: black;
-    text-align: justify;
-    padding: 60px;
-}
-.containerItems{
-    display: flex;
-    justify-content: center;
-}
-.cardsIndex{
-    width: 350px;
-    height: 400px;
-    border: 2px solid red;
-    margin: 50px;
-}
-.cardsPics{
-    width: 285px;
-    height: 160px;
-    margin-left: 30px;
-    padding: 8px;
-}
-.cardTittles{
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.3rem;
-    text-align: center;
-    text-decoration: underline;
-    color: white;
-}
-.cardTexts{
-    font-family: 'Roboto Slab', serif;
-    font-size: 1rem;
-    text-align: justify;
-    color: white;
 }

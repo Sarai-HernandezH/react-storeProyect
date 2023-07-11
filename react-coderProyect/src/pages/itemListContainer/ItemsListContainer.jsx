@@ -1,6 +1,8 @@
 import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import './ItemsListContainer.css'
+import { useNavigate } from 'react-router-dom';
 
 const Greeting = (props) =>{
     return (
@@ -46,11 +48,11 @@ const Introduction = () =>{
 }
 
 const ContainerItemsToSell = () =>{
+
     return(
         <div>
             <Greeting text ='Welcome Music Lovers!' />
             <Introduction />
-            <container>
                 <div className= "containerItems">
                     <Card bg="dark" className="cardsIndex">
                         <Card.Img className="cardsPics" variant="top" src="/instruments.jpg" />
@@ -61,19 +63,19 @@ const ContainerItemsToSell = () =>{
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button variant="danger">Click here to know more</Button>
+                            <Button variant="danger" href="/instrumentCards">Click here to know more</Button>
                         </Card.Footer>
                     </Card>
                     <Card bg="dark" className="cardsIndex">
                         <Card.Img className="cardsPics" variant="top" src="/vynils.jpg" />
                         <Card.Body>
-                            <Card.Title className="cardTittles">Vynils</Card.Title>
+                            <Card.Title className="cardTittles">Vinyls</Card.Title>
                                 <Card.Text className="cardTexts">
                                     Hundreds of Artists, find classics and brand new artists Vynil collections.
                                 </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button variant="danger">Click here to know more</Button>
+                            <Button variant="danger" href="/vinyls">Click here to know more</Button>
                         </Card.Footer>
                     </Card>
                     <Card bg="dark" className="cardsIndex">
@@ -85,11 +87,10 @@ const ContainerItemsToSell = () =>{
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button variant="danger">Click here to know more</Button>
+                            <Button variant="danger" href="/cds">Click here to know more</Button>
                         </Card.Footer>
                     </Card>
                 </div>
-            </container>
         </div>
     )
 }
