@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto&family=Roboto+Slab&family=Satisfy&display=swap');
+
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+.sliderContent {
+    font-family:'Roboto Slab', serif;
+    font-size: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    scroll-behavior: smooth;
+    cursor: pointer;
+    padding: 0 3rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+}
+
+.nextButton,
+.previousButton {
+    border: none;
+    width: 2rem;
+    height: 4rem;
+    position: absolute;
+    top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    background-color: #000000;
+    border-radius: 0.5rem;
+    color: red;
+    font-size: 1.5rem;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.nextButton:active,
+.previousButton:active,
+.nextButton:hover,
+.previousButton:hover {
+    background-color: grey;
+    color: white;
+}
+
+.categoryContainer {
+    min-width: fit-content;
+    height: 60px;
+    background-color: grey;
+    padding: 1rem;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    color: #000000;
+    margin-top: 10px;
+}
+.categoryContainer:hover {
+    background-color: black;
+    color: #FFFFFF;
+}
+.categoryName{
+    font-family:'Roboto Slab', serif;
+    font-size: 1.3rem;
+}

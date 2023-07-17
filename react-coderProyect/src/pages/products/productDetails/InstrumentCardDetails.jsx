@@ -1,34 +1,34 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './instrumentDetails.css';
-import InstrumentsData from '../../../instruments.json';
+import './cardDetails.css';
+import InstrumentsData from '../../../products.json';
 import Loader from '../../../components/loader/loader';
 
 
 
 
 function InstrumentDetails () {
-    const { instrumentId } = useParams();
+    const { productSubCategory } = useParams();
     const navigate = useNavigate();
     const [instrument, setInstrument] = useState({ loading: false, error: false });
 
 
     
     useEffect(() => {
-        const selectedInstrument = InstrumentsData.find((data) => data.id === parseInt(instrumentId));
+        const selectedInstrument = InstrumentsData.find((data) => data.subCategory === parseInt(productSubCategory));
         setInstrument({ ...selectedInstrument, loading: true });
 
         setTimeout(() => {
             setInstrument({ ...selectedInstrument, loading: false });
         }, 1000);
-        }, [instrumentId]);
+        }, [productSubCategory]);
 
     if (!instrument) {
         return null;
     }
     const history = window.history;
 
-    const { id, name, description, price, img, stock, loading, error } = instrument;
+    const { id, name, category, description, price, img, stock, loading, error } = instrument;
 
     return (
             <>
@@ -52,6 +52,7 @@ function InstrumentDetails () {
                         </div>
                         <div className='cardDetailContent'>
                             <h3 className='cardDetailName'>{name}</h3>
+                            <p className='cardDetailCategory'>{category}</p>
                             <p className='cardDetailDescription'>{description}</p>
                             <p className='cardDetailPrice'>USD {price}</p>
                             <p className='cardDetailStock'>{stock} left</p>

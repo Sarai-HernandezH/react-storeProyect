@@ -97,6 +97,10 @@
     top: 0;
 }
 
+.container, .container-lg, .container-md, .container-sm, .container-xl{
+    background-color: transparent;
+}
+
 
 @media (min-width: 768px) {
     .nav {
@@ -109,14 +113,13 @@
         color: #fff;
 
     }
+    .menu :hover {
+        color: #fff;
+    }
     .menu {
         float: left;
         list-style-type: none;
-    }
-
-    .menu :hover {
-        background-color: transparent;
-        color: #fff;
+        background-color: none;
     }
 
     .hamb {

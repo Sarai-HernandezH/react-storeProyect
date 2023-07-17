@@ -30,9 +30,9 @@ const Header = ({ logo }) => {
                             <Nav.Item>
                                 <Nav.Link className="navLinks"  href="#">Contact</Nav.Link> 
                             </Nav.Item>
-                            <NavDropdown className="navLinks" title="Products" id="basic-nav-dropdown">
+                            <NavDropdown className="navLinks" title="Products" href="/products" id="basic-nav-dropdown">
                                 <NavDropdown.Item id="dropdown-items" href="/vinyls">Vinyls</NavDropdown.Item>
-                                <NavDropdown.Item id="dropdown-items" href="/instrumentCards">Instruments</NavDropdown.Item>
+                                <NavDropdown.Item id="dropdown-items" href="/instruments">Instruments</NavDropdown.Item>
                                 <NavDropdown.Item id="dropdown-items" href="/cds">CD's</NavDropdown.Item>
                             </NavDropdown>
                             <Nav.Item>

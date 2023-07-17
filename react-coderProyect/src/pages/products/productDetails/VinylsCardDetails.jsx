@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import './instrumentDetails.css';
+import './cardDetails.css';
 import VinylsData from '../../../vinyls.json';
 import Loader from '../../../components/loader/loader';
 
@@ -28,7 +28,7 @@ function VinylDetails () {
     }
     const history = window.history;
 
-    const { id, name, description, price, img, stock, loading, error } = vinyl;
+    const { id, name, category, price, img, stock, loading, error } = vinyl;
 
     return (
             <>
@@ -48,11 +48,11 @@ function VinylDetails () {
             <div className='cardVinylsDetails'>
                     <div className='cardDetail' key={id}>
                         <div className='cardDetailImageContainer'>
-                        <img className='cardDetailImage' src={img} alt={name} />
+                            <img className='cardDetailImage' src={img} alt={name} />
                         </div>
                         <div className='cardDetailContent'>
                             <h3 className='cardDetailName'>{name}</h3>
-                            <p className='cardDetailDescription'>{description}</p>
+                            <p className='cardDetailCategory'>{category}</p>
                             <p className='cardDetailPrice'>USD {price}</p>
                             <p className='cardDetailStock'>{stock} left</p>
                             <div className='cardDetailActions'>

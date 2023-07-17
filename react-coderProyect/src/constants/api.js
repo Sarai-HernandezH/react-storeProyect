@@ -1,16 +1,6 @@
 export const API_URLS = {
-    INSTRUMENTS: {
-        url: './src/instruments.json',
-        config: {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }
-    },
-
-    VINYLS: {
-        url: './src/vinyls.json',
+    PRODUCTS: {
+        url: './src/products.json',
         config: {
             method: 'GET',
             headers: {

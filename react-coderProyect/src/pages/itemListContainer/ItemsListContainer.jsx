@@ -2,7 +2,7 @@ import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import './ItemsListContainer.css'
-import { useNavigate } from 'react-router-dom';
+
 
 const Greeting = (props) =>{
     return (
@@ -63,7 +63,7 @@ const ContainerItemsToSell = () =>{
                             </Card.Text>
                         </Card.Body>
                         <Card.Footer>
-                            <Button variant="danger" href="/instrumentCards">Click here to know more</Button>
+                            <Button variant="danger" href="/instruments">Click here to know more</Button>
                         </Card.Footer>
                     </Card>
                     <Card bg="dark" className="cardsIndex">
