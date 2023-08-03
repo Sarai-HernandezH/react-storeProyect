@@ -1,19 +1,21 @@
 export const API_URLS = {
     PRODUCTS: {
-        url: 'http://localhost:3000/products',
+        url: 'https://dev-tngvyhvvpdelpke.api.raw-labs.com/products.json',
         config: {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept':'application/json'
             }
         }
     },
     CATEGORIES:{
-        url:'http://localhost:3000/categories',
+        url:'https://dev-tngvyhvvpdelpke.api.raw-labs.com/categories.json',
         config: {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
+                'Accept':'application/json'
             }
         }
     }

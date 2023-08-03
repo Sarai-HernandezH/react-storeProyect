@@ -2,7 +2,7 @@
 import { useEffect, useState, useContext } from 'react'
 import './products.css'
 import Input from '../../components/input/input';
-import Card from '../../constants/card';
+import Card from '../../constants/Card';
 import Loader from '../../components/loader/loader';
 import { useFetch } from '../../hooks/useFetch';
 import { API_URLS } from '../../constants/api'
@@ -21,8 +21,9 @@ function Products() {
 
   const { setProducts, onAddToCart } = useContext(CartContext);
 
-  const { data: products, loading: loadingProducts, error: errorProducts } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
-  const { data: categories, loading: loadingCategories, error: errorCategories } = useFetch(API_URLS.CATEGORIES.url, API_URLS.CATEGORIES.config);
+  const { data: products, loading: loadingProducts, error: errorProducts  } = useFetch(API_URLS.PRODUCTS.url, API_URLS.PRODUCTS.config);
+  const { data: categories, loading: loadingCategories, error: errorCategories  } = useFetch(API_URLS.CATEGORIES.url, API_URLS.CATEGORIES.config);
+
 
   const filterBySearch = (query) => {
     if (selectedCategory !== 'All' && query.length === 0) {
@@ -62,11 +63,26 @@ function Products() {
   }
 
   const onFilter = (name) => {
+  
     setIsFiltered(true);
-    const productsByCategory = products.filter((product) => product.category === name);
-    setProductFiltered(productsByCategory);
     setSelectedCategory(name);
-  }
+  
+    switch (name) {
+      case "Instruments":
+        setProductFiltered(products.filter((item) => item.category === "Instruments"));
+        break;
+      case "Vinyls":
+        setProductFiltered(products.filter((item) => item.category === "Vinyls"));
+        break;
+      case "CDs":
+        setProductFiltered(products.filter((item) => item.category === "CDs"));
+        break;
+      default:
+        setProductFiltered(products);
+        break;
+    }
+  };
+
 
   return (
     <>
@@ -75,10 +91,10 @@ function Products() {
           {loadingCategories ? <Loader /> : null}
           {errorCategories ? <h2>{errorCategories}</h2> : null}
           <Slider>
-            <CategoryItem name="All" onSelectCategory={() => setIsFiltered(false)} type='button' />
+            <CategoryItem key="all" name="All" onSelectCategory={() => setIsFiltered(false)} type='button' />
             {
               categories.map((category) => (
-                <CategoryItem key={category.id} name={category.name} onSelectCategory={() => onFilter(category.name)} type='button' />
+                <CategoryItem key={category.id} name={category.name} onSelectCategory={() => onFilter(category.name)}  type='button' />
               ))
             }
           </Slider>
