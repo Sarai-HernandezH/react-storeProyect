@@ -1,5 +1,5 @@
 
-import ItemsList from '../itemListContainer/ItemsListContainer';
+import ItemsList from './ItemsListContainer';
 
 
 function Home() {

@@ -1,0 +1,49 @@
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.checkoutFormContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.checkoutDetailContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 2rem;
+}
+.checkoutCartContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1.6rem;
+}
+.checkoutForm {
+    display: flex;
+    flex-direction: column;
+}
+.cartContainer {
+    display: flex;
+    flex-direction: column;
+}
+.checkoutFormInputGroup {
+    padding: 1rem 0; 
+}
+
+.butttonCheckout {
+    border: none;
+    background-color: #060606;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.butttonCheckout:hover {
+    background-color: #ce1313;
+}
+

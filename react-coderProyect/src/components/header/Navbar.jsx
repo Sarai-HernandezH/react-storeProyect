@@ -1,17 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
-import CartWidget from './CartWidget';
-import '../header/Navbar.css';
+import { useContext } from "react";
+import { CartContext } from "../../context/cart-context";
+import { Link, useNavigate } from "react-router-dom";
+import carritoImagen from '/carrito.svg';
+import './navbar.css';
 import siteLogo from '/logo.svg';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-
 
 
 const Header = ({ logo }) => {
+    const { cart } = useContext(CartContext);
+    const navigate = useNavigate();
+    
+    const goToCart = () => {
+        navigate('/cart');
+    }
     return (
         <header className="header">
             <Navbar bg="red" expand="lg" className="nav">
@@ -20,7 +26,7 @@ const Header = ({ logo }) => {
                     <label className="hamb" htmlFor ="side-menu">
                         <span className="hamb-line"></span>
                     </label>
-                    <Navbar.Brand href="/" className="logo"> <img src={siteLogo}{...logo} alt="Site Logo"></img>Front Stage Music Store</Navbar.Brand>
+                    <Link to="/"><Navbar.Brand className="logo"> <img src={siteLogo}{...logo} alt="Site Logo"></img>Front Stage Music Store</Navbar.Brand></Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav>
@@ -28,20 +34,19 @@ const Header = ({ logo }) => {
                                 <Nav.Link className="navLinks" href="/">Home</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link className="navLinks"  href="#">Contact</Nav.Link> 
+                                <Nav.Link className="navLinks"href="/products">Products</Nav.Link>
                             </Nav.Item>
-                            <NavDropdown className="navLinks" title="Products" href="/products" id="basic-nav-dropdown">
-                                <NavDropdown.Item id="dropdown-items" href="/vinyls">Vinyls</NavDropdown.Item>
-                                <NavDropdown.Item id="dropdown-items" href="/instruments">Instruments</NavDropdown.Item>
-                                <NavDropdown.Item id="dropdown-items" href="/cds">CD's</NavDropdown.Item>
-                            </NavDropdown>
                             <Nav.Item>
-                                <Nav.Link className="navLinks" href="/about">About</Nav.Link>
+                                <Nav.Link onClick={goToCart} className="navLinks menu-cart-container">
+                                    <img className="menu-cart-image" src={carritoImagen} alt="Imagen carrito" />
+                                    <div>
+                                        <span className="menu-cart-count">{cart.length}</span>
+                                    </div>
+                                </Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-                <CartWidget />
             </Navbar>
         </header>
     )

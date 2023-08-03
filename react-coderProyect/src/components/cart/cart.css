@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto&family=Roboto+Slab&family=Satisfy&display=swap');
+
+.cartItem {
+    display: flex;
+    justify-content: center;
+}
+
+.cartItem {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(225, 222, 222);
+    border: 1px solid #c9c9bf;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.cartContentContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 1rem;
+    color: #000000;
+    justify-content: space-between;
+}
+
+.cartProductName {
+    font-family:'Roboto Slab', serif ;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.cartQuantity {
+    font-size: 0.9rem;
+}
+
+.cartPrice {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.cartStock {
+    font-size: 0.9rem;
+}
+
+.cartActions {
+    display: flex;
+    flex-direction: row;
+    max-width: 250px;
+    justify-content: space-between;
+}
+
+.cartButttonAdd {
+    border: none;
+    background-color: #ce1313;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButttonAdd:hover {
+    background-color: #ce1313;
+    color: #000000;
+}
+
+.cartButttonDecrease {
+    border: none;
+    background-color: rgb(225, 222, 222);
+    color: #000000;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    border: 1px solid #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButttonRemove {
+    border: none;
+    background-color: rgb(225, 222, 222);
+    color: #000000;
+    padding: 1rem 2rem;
+    border-radius: 0.2rem;
+    border: 1px solid #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButttonDecrease:hover,
+.cartButttonRemove:hover {
+    background-color: #ce1313;
+    color: #ffffff;
+}
+
+.cartDetailActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 500px;
+}
+
+.cartTotal {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cartButttonCheckout {
+    border: none;
+    background-color: #ce1313;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButttonCheckout:hover {
+    background-color: black;
+}

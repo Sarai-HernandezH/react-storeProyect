@@ -12,6 +12,7 @@
 .containerItems{
     display: flex;
     justify-content: center;
+    margin-bottom: 3rem;
 }
 .cardsIndex{
     width: 350px;
@@ -37,4 +38,12 @@
     font-size: 1rem;
     text-align: justify;
     color: white;
+}
+
+.productsHomePointer{
+    font-Family: "'Passion One', cursive";
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
 }

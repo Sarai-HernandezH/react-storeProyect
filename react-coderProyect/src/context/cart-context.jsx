@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 
 const initialState = {
     product: [],
+    categories :[],
     cart: [],
     setCart: () => {},
     getItemQuantity: () => {},
@@ -20,7 +21,7 @@ export const CartProvider = ({ children }) => {
 
     const onAddToCart = (id) => {
         const item = products.find((product) => product.id === id);
-        if(cart?.find((product) => product.id === id)?.quantity === item.stock) return;
+        if(cart?.find((product) => product.id === id)?.quantity === Number(item.stock)) return;
         if(cart?.length === 0){
             setCart([{...item, quantity: 1}])
         }
@@ -33,7 +34,7 @@ export const CartProvider = ({ children }) => {
                     if(product.id === id) {
                         return { ...product, quantity: product.quantity + 1 }
                     } else {
-                        return product
+                        return product;
                     }
                 })
             });
@@ -48,7 +49,7 @@ export const CartProvider = ({ children }) => {
                     if(product.id === id) {
                         return { ...product, quantity: product.quantity - 1 }
                     } else {
-                        return product
+                        return product;
                     }
                 })
             });

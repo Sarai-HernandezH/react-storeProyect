@@ -1,7 +1,8 @@
 import React from "react"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import './ItemsListContainer.css'
+import './itemsListContainer.css'
+import { useNavigate } from "react-router-dom";
 
 
 const Greeting = (props) =>{
@@ -47,12 +48,25 @@ const Introduction = () =>{
     )
 }
 
+const ProductsAccess = () =>{
+    const navigate = useNavigate();
+    const products = () => {
+        navigate('/products');
+    }
+    return(
+        <div onClick={products} className="productsHomePointer">
+            <h2 >Click here to see all of our Products available!</h2>
+        </div>
+    )
+}
+
 const ContainerItemsToSell = () =>{
 
     return(
         <div>
             <Greeting text ='Welcome Music Lovers!' />
             <Introduction />
+            <ProductsAccess />
                 <div className= "containerItems">
                     <Card bg="dark" className="cardsIndex">
                         <Card.Img className="cardsPics" variant="top" src="/instruments.jpg" />
@@ -62,9 +76,6 @@ const ContainerItemsToSell = () =>{
                                 Come and check all the variety of instruments we have on store.
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button variant="danger" href="/instruments">Click here to know more</Button>
-                        </Card.Footer>
                     </Card>
                     <Card bg="dark" className="cardsIndex">
                         <Card.Img className="cardsPics" variant="top" src="/vynils.jpg" />
@@ -74,9 +85,6 @@ const ContainerItemsToSell = () =>{
                                     Hundreds of Artists, find classics and brand new artists Vynil collections.
                                 </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button variant="danger" href="/vinyls">Click here to know more</Button>
-                        </Card.Footer>
                     </Card>
                     <Card bg="dark" className="cardsIndex">
                         <Card.Img className="cardsPics" variant="top" src="/cds.jpg" />
@@ -86,9 +94,6 @@ const ContainerItemsToSell = () =>{
                                 If you are a collectionist you can come and check our huge collection of CD's
                             </Card.Text>
                         </Card.Body>
-                        <Card.Footer>
-                            <Button variant="danger" href="/cds">Click here to know more</Button>
-                        </Card.Footer>
                     </Card>
                 </div>
         </div>
