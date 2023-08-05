@@ -8,8 +8,8 @@ const SuccessOrder = () => {
     const { orderId } = location.state || { orderId: null}
     return (
         <div>
-            <h2>Success Order</h2>
-            <p>Order Id: {orderId}</p>
+            <h2 className='success'>Success Order</h2>
+            <p className='orderId'>Order Id: {orderId}</p>
         </div>
     )
 }

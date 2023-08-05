@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { useEffect, useState, useContext } from 'react'
 import './products.css'
 import Input from '../../components/input/input';
@@ -63,25 +62,11 @@ function Products() {
   }
 
   const onFilter = (name) => {
-  
     setIsFiltered(true);
+    const productsByCategory = products.filter((product) => product.category === name);
+    setProductFiltered(productsByCategory);
     setSelectedCategory(name);
-  
-    switch (name) {
-      case "Instruments":
-        setProductFiltered(products.filter((item) => item.category === "Instruments"));
-        break;
-      case "Vinyls":
-        setProductFiltered(products.filter((item) => item.category === "Vinyls"));
-        break;
-      case "CDs":
-        setProductFiltered(products.filter((item) => item.category === "CDs"));
-        break;
-      default:
-        setProductFiltered(products);
-        break;
-    }
-  };
+}
 
 
   return (
@@ -94,7 +79,7 @@ function Products() {
             <CategoryItem key="all" name="All" onSelectCategory={() => setIsFiltered(false)} type='button' />
             {
               categories.map((category) => (
-                <CategoryItem key={category.id} name={category.name} onSelectCategory={() => onFilter(category.name)}  type='button' />
+                <CategoryItem key={category.name} name={category.name} onSelectCategory={() => onFilter(category.name)}  type='button' />
               ))
             }
           </Slider>

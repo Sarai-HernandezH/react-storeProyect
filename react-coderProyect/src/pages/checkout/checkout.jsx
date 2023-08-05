@@ -26,8 +26,8 @@ function Checkout() {
     const [formState, inputHandler, inputFocus, inputBlur, clearInputs] = useForm(initialState)
     const { state } = useLocation();
 
-
     const navigate = useNavigate();
+    
     let query = useQuery();
 
     useEffect(() => {
@@ -74,6 +74,7 @@ function Checkout() {
                 address: formState.address.value,
                 postalCode: formState.postalCode.value,
             },
+            createdAt: new Date(),
             items: cart,
             payment: {
                 currency: 'USD',
@@ -100,16 +101,16 @@ function Checkout() {
         return {
             orderId,
         }
-    }// Just after getting cartId from useLocation
+    }
     console.log('Form State:', formState);
 
     const onSubmit = async (event) => {
-        event.preventDefault();
+        event.preventDefault()
         const { orderId } = await onHandlerOrder();
-        clearInputs({ formState });
-        console.log(orderId);
+        clearInputs({ formState })
+        navigate('/success-order', { state: { orderId: orderId.id } })
     }
-    console.log({ orderId });
+
     return (
         <div className="checkoutContainer">
             <div className='checkoutDetailContainer'>
@@ -244,9 +245,6 @@ function Checkout() {
                         <Total total={total} totalItemQuantity={getTotalItemQuantity()} />
                     </div>
                 ) : null}
-                <Link to="/success-order" state={{ orderId: orderId.id }}>
-                    <button>Checkout</button>
-                </Link>
             </div>
         </div>
     )

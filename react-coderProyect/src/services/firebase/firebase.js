@@ -51,5 +51,5 @@ export const firebaseServices = {
         } catch (error) {
             return { error }
         }
-    },
+    }
 }

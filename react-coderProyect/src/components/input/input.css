@@ -66,3 +66,14 @@ button, input, optgroup, select, textarea{
     font-family:'Roboto Slab', serif;
 }
 
+.error {
+    margin-top: 0.2rem;
+    padding: 0rem 1rem;
+    left: 0;
+    position: absolute;
+    bottom: -1.45rem;
+    z-index: 3;
+    color: #D53734;
+    font-size: 0.9rem;
+}
+

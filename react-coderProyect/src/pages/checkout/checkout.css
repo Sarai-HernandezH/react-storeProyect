@@ -46,4 +46,8 @@
 .butttonCheckout:hover {
     background-color: #ce1313;
 }
-
+.butttonCheckout:disabled {
+    background-color: #808A9F;
+    color: #ffffff;
+    cursor: not-allowed;
+}

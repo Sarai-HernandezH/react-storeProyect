@@ -6,7 +6,7 @@
         "name": "Electric Guitar Epiphone", 
         "subCategory": "Guitars",
         "category": "Instruments",
-        "price": 1.035, 
+        "price": 1035, 
         "img":"https://f.fcdn.app/imgs/ef9730/www.palaciodelamusica.com.uy/pmusuy/1f50/webp/catalogo/ENMSSRMNH1-ENMSSRMNH1_1/2000-2000/guitarra-electrica-epiphone-sg-muse-roja-guitarra-electrica-epiphone-sg-muse-roja.jpg", 
         "stock": 20, 
         "description": "Red Electric Guitar"
@@ -17,7 +17,7 @@
         "name": "Electric Guitar Ibanez",
         "subCategory": "Guitars",
         "category": "Instruments",
-        "price": 2.225 , 
+        "price": 2225 , 
         "img": "https://f.fcdn.app/imgs/bf26f2/www.palaciodelamusica.com.uy/pmusuy/b659/webp/catalogo/T0D10-T0D10_1/2000-2000/guitarra-electrica-ibanez-t0d10-tim-henson-guitarra-electrica-ibanez-t0d10-tim-henson.jpg", 
         "stock": 55, 
         "description": "Ibanez T0d10 Tim Henson Electric Guitar"
@@ -51,7 +51,7 @@
         "name": "Casio Digital Piano", 
         "subCategory": "Pianos",
         "category": "Instruments",
-        "price": 1.599, 
+        "price": 1599, 
         "img": "https://f.fcdn.app/imgs/9136dd/www.palaciodelamusica.com.uy/pmusuy/74c1/webp/catalogo/PXS1100BK-PXS1100BK_1/2000-2000/piano-digital-casio-privia-pxs1100-black-piano-digital-casio-privia-pxs1100-black.jpg", 
         "stock": 15, 
         "description": "Digital Piano Casio Ap270 Bk"
@@ -62,7 +62,7 @@
         "name": "Digital Nord Grand Piano", 
         "subCategory": "Pianos",
         "category": "Instruments",
-        "price": 4.055, 
+        "price": 4055, 
         "img": "https://f.fcdn.app/imgs/312820/www.palaciodelamusica.com.uy/pmusuy/48e1/webp/catalogo/10841-10841_1/2000-2000/piano-digital-nord-grand-piano-digital-nord-grand.jpg", 
         "stock": 25, 
         "description": "Red and Black Digital Piano with Led screen included"
@@ -73,7 +73,7 @@
         "name": "Drum Kit With Hardware", 
         "subCategory": "Drums",
         "category": "Instruments",
-        "price": 1.545 , 
+        "price": 1545 , 
         "img": "https://f.fcdn.app/imgs/7286b2/www.palaciodelamusica.com.uy/pmusuy/8ac0/webp/catalogo/VE5044FTCVH-VE5044FTCVH_1/2000-2000/bateria-mapex-venus-ve5044ftcvh-black-galaxy-sparkle-c-hardware-bateria-mapex-venus-ve5044ftcvh-black-galaxy-sparkle-c-hardware.jpg", 
         "stock": 40, 
         "description": "Mapex Storm Fusion Iron Gray 5 Body Drum Kit With Hardware"
@@ -95,7 +95,7 @@
         "name": "Trumpet", 
         "subCategory": "Wind",
         "category": "Instruments",
-        "price": 1.099 , 
+        "price": 1099 , 
         "img": "https://f.fcdn.app/imgs/ec03ce/www.palaciodelamusica.com.uy/pmusuy/cd71/webp/catalogo/YTR2330-YTR2330_1/2000-2000/trompeta-yamaha-ytr2330-trompeta-yamaha-ytr2330.jpg", 
         "stock": 15 , 
         "description": "Yamaha Ytr2330 trumpet"
@@ -117,7 +117,7 @@
         "name": "Electric Bass", 
         "subCategory": "Bass",
         "category": "Instruments",
-        "price": 1.785, 
+        "price": 1785, 
         "img": "https://f.fcdn.app/imgs/5b7d73/www.palaciodelamusica.com.uy/pmusuy/2297/webp/catalogo/SR1300NTF-SR1300NTF_1/2000-2000/bajo-electrico-ibanez-sr1300-premium-natural-bajo-electrico-ibanez-sr1300-premium-natural.jpg", 
         "stock": 20, 
         "description": "Ibanez SR1300 Premium Natural Electric Bass"

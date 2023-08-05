@@ -7,9 +7,9 @@ import CartItem from '../../components/cart/item';
 import Total from '../../components/cart/total';
 
 function Cart() {
-    const navigate = useNavigate();
-    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total, getTotalItemQuantity } = useContext(CartContext);
 
+    const {cart, onAddToCart, onRemoveItem, onDecreaseItem, total, getTotalItemQuantity } = useContext(CartContext);
+    const navigate = useNavigate();
     const onHandlerCreateCart = async () => {
         const newCart = {
             buyer: {
@@ -20,16 +20,19 @@ function Cart() {
             total: total,
             status: 'pending',
         }
-
-        const cartId = await firebaseServices.createCart(newCart)
+        const cartId = await firebaseServices.createCart(newCart)        
+        console.log(newCart);
+        console.log(cartId);        
         return cartId
     }
+    
     const onHandlerCheckout = async (event) => {
+        console.log('onHandlerCheckout called');
         event.preventDefault();
         const cartId = await onHandlerCreateCart()
         navigate('/checkout', { state: { cartId: cartId.id } })
+        console.log(cartId);
     }
-    console.log(cart);
     return (
         <div>
             <div className='cartContainer'>

@@ -1,10 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/home/index';
 import Products from '../pages/products/products';
-import ProductDetail from '../pages/product-detail/productDetail';
+import ProductDetail from '../pages/product-detail/ProductDetail';
 import Cart from '../pages/cart/cart';
 import Checkout from '../pages/checkout/checkout';
-import SuccessOrder from '../pages/success-order/successOrder';
+import SuccessOrder from '../pages/success-order/SuccessOrder';
 
 function Router() {
     return (
